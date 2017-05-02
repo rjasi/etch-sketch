@@ -1,5 +1,7 @@
 
-
+html{
+	background-color: #0074D9;
+}
 
 
 .grid {
@@ -9,6 +11,7 @@
     margin-left: auto;
     margin-right: auto;
     background: #000000;
+    padding: 10px;
 
 
 
@@ -18,7 +21,7 @@
 	float: left;
 	width: 10px;
 	height: 10px;
-	background-color: rgb(255,0,0);
+	background-color: #3B653D;
 	display: inline-block;
 
 
@@ -32,3 +35,22 @@
 
 
 
+.button{
+	height: 50px;
+	width: 100px;
+	margin: 0 auto;
+	margin-top: 10px;
+	vertical-align: top;
+	padding: 10px;
+	background-color: rgb(0,0,0);
+	border-color: #AAAAAA;
+}
+
+.center-buttons{
+	text-align: center;
+	display: block;
+}
+
+a{
+	color: #FFF;
+}

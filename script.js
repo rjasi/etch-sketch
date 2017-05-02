@@ -23,12 +23,20 @@ var createGrid = function(row2,columns){
     }
 
     $('.grid').css("height", (row2*10)+'px');
-    $('.grid').css("width",(row2*10)+'px');
+    $('.grid').css("width",(columns*10)+'px');
+
+
+}
+
+var etch_sketch = function(r,c){
+
+    createGrid(r,c);
 
     $('.cell').hover(function(){
-        $(this).css('background-color','rgb(0,0,0)');
+        $(this).css('background-color','#FFF');
 
     })
+
 
 
 }
@@ -36,11 +44,11 @@ var createGrid = function(row2,columns){
 
 $(document).ready(function () {
     
-    createGrid(rows,columns);
+    etch_sketch(50,100)
 
-    $('.button').click(function(){
+    $('#erase-button').click(function(){
         $('.grid').empty();
-        createGrid(50,50)
+        etch_sketch(50,100)
     })
 
 
