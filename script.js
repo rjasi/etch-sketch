@@ -1,6 +1,8 @@
 var rows = 10;
 var columns = 10;
 
+width = 100;
+height = 50;
 
 var createGrid = function(row2,columns){
     $('.grid').empty();
@@ -42,14 +44,33 @@ var etch_sketch = function(r,c){
 }
 
 
+var changeGridSize= function (){
+    width= prompt("What grid width do you want? Minumum 10 Maximum 200.");
+    height= prompt("What grid height do you want? Minumum 10 Maximum 200.");
+
+    try{
+        width = parseint(width);
+        height = parseint(height);
+    }
+    catch(err){
+        alert("Invalid input");
+    } 
+
+    etch_sketch(height,width);
+
+
+
+}
+
 $(document).ready(function () {
     
-    etch_sketch(50,100)
+    etch_sketch(height,width)
 
     $('#erase-button').click(function(){
         $('.grid').empty();
-        etch_sketch(50,100)
+        etch_sketch(height,width)
     })
+
 
 
 
